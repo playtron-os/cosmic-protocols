@@ -77,6 +77,18 @@ pub mod toplevel_info {
     }
 }
 
+pub mod kora_toplevel_identity {
+    //! Atomic toplevel identifiers and compositor-authenticated workspaces.
+
+    #[allow(missing_docs)]
+    pub mod v1 {
+        wayland_protocol!(
+            "./unstable/kora-toplevel-identity-v1.xml",
+            [wayland_protocols::xdg::shell, wayland_protocols::ext::foreign_toplevel_list::v1]
+        );
+    }
+}
+
 pub mod toplevel_management {
     //! Modify state toplevel surfaces.
 

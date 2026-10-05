@@ -4,3 +4,10 @@
 [![Docs](https://img.shields.io/badge/Docs-main-informational)](https://pop-os.github.io/cosmic-protocols/)
 
 Additional wayland protocols and generated rust bindings used by the COSMIC desktop environment.
+
+`kora_toplevel_identity::v1` binds [the toplevel identity protocol](unstable/kora-toplevel-identity-v1.xml).
+It gives an application's own toplevel, or a live foreign handle, an atomic
+identifier and authenticated process workspace. An empty workspace identifies
+the machine plane; no workspace event means unknown. Visibility changes retain
+the mapped lifetime's identity, while a true unmap closes it and a remap creates
+a fresh identifier.
