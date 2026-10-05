@@ -77,6 +77,18 @@ pub mod toplevel_info {
     }
 }
 
+pub mod kora_app_commands {
+    //! Per-window application command catalogs and shell invocations.
+
+    #[allow(missing_docs)]
+    pub mod v1 {
+        wayland_protocol!(
+            "./unstable/kora-app-commands-v1.xml",
+            [wayland_protocols::xdg::shell]
+        );
+    }
+}
+
 pub mod kora_toplevel_identity {
     //! Atomic toplevel identifiers and compositor-authenticated workspaces.
 
